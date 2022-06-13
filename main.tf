@@ -80,10 +80,6 @@ resource "yandex_compute_instance" "test-7-3-foreach" {
     subnet_id = "${yandex_vpc_subnet.default.id}"
     nat       = true
   }
-
-  metadata = {
-    ssh-keys = "user:${file("~/.ssh/id_rsa.pub")}"
-  }
 }
 
 locals {
